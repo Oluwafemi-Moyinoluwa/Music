@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodia - Your Music Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+   <scriptm src ="script.js"></script> 
+
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="brand">
+            <i class="fas fa-compact-disc"></i>
+            <span>Melodia</span>
+        </div>
+
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" data-page="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="discover">
+                        <i class="fas fa-compass"></i>
+                        <span>Discover</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="library">
+                        <i class="fas fa-folder"></i>
+                        <span>Library</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="playlists">
+                        <i class="fas fa-list-ul"></i>
+                        <span>Playlists</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="search">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="profile">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="greeting">
+                <h1>Welcome back!</h1>
+                <p id="current-time">Good evening</p>
+            </div>
+            <div class="user-actions">
+                <button class="btn btn-secondary">
+                    <i class="fas fa-bell"></i>
+                    Notifications
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-crown"></i>
+                    Upgrade Pro
+                </button>
+            </div>
+        </div>
+
+        <!-- HOME PAGE -->
+        <div id="home" class="page active">
+            <div class="section-header">
+                <h2><i class="fas fa-fire"></i> Trending Now</h2>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-guitar"></i>
+                    </div>
+                    <h3>Rock Legends</h3>
+                    <p>Epic guitar solos and powerful vocals</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #ff6b35, #f7931e);">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <h3>Electronic Pulse</h3>
+                    <p>High-energy beats and synths</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                    <h3>Pop Sensation</h3>
+                    <p>Chart-topping hits and catchy hooks</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Love Songs</h3>
+                    <p>Romantic melodies for every mood</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Chill Vibes</h3>
+                    <p>Relaxing tunes to unwind</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Summer Hits</h3>
+                    <p>Sunny days and good times</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2><i class="fas fa-clock"></i> Recently Played</h2>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Midnight Dreams</h3>
+                    <p>The Dreamers</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Electric Soul</h3>
+                    <p>DJ Nova</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">
+                        <i class="fas fa-record-vinyl"></i>
+                    </div>
+                    <h3>Retro Wave</h3>
+                    <p>Synthwave Collective</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DISCOVER PAGE -->
+        <div id="discover" class="page">
+            <div class="section-header">
+                <h2><i class="fas fa-compass"></i> Discover New Music</h2>
+            </div>
+
+            <div class="section-header">
+                <h3>Browse by Genre</h3>
+            </div>
+
+            <div class="genre-grid">
+                <div class="genre-card" style="background: #e74c3c;">
+                    <span>Rock</span>
+                </div>
+                <div class="genre-card" style="background: #9b59b6;">
+                    <span>Pop</span>
+                </div>
+                <div class="genre-card" style="background: #3498db;">
+                    <span>Electronic</span>
+                </div>
+                <div class="genre-card" style="background: #1abc9c;">
+                    <span>Jazz</span>
+                </div>
+                <div class="genre-card" style="background: #f39c12;">
+                    <span>Hip Hop</span>
+                </div>
+                <div class="genre-card" style="background: #e67e22;">
+                    <span>Country</span>
+                </div>
+                <div class="genre-card" style="background: #16a085;">
+                    <span>Classical</span>
+                </div>
+                <div class="genre-card" style="background: #c0392b;">
+                    <span>R&B</span>
+                </div>
+                <div class="genre-card" style="background: #8e44ad;">
+                    <span>Indie</span>
+                </div>
+                <div class="genre-card" style="background: #2c3e50;">
+                    <span>Metal</span>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 3rem;">
+                <h2><i class="fas fa-star"></i> Featured Artists</h2>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-user-music"></i>
+                    </div>
+                    <h3>Luna Eclipse</h3>
+                    <p>Alternative Pop Artist</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>The Midnight Crew</h3>
+                    <p>Indie Rock Band</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-compact-disc"></i>
+                    </div>
+                    <h3>Bass Kingdom</h3>
+                    <p>Electronic Producer</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LIBRARY PAGE -->
+        <div id="library" class="page">
+            <div class="section-header">
+                <h2><i class="fas fa-folder"></i> Your Library</h2>
+                <button class="btn btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Add Music
+                </button>
+            </div>
+
+            <div class="tracks-container">
+                <div class="track-row" style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0.5rem;">
+                    <div class="track-number">#</div>
+                    <div><strong>Title</strong></div>
+                    <div class="track-artist"><strong>Artist</strong></div>
+                    <div class="track-album"><strong>Album</strong></div>
+                    <div class="track-duration" style="text-align: center;"><strong>Time</strong></div>
+                </div>
+
+                <div class="track-row">
+                    <div class="track-number">1</div>
+                    <div class="track-title">
+                        <div class="track-icon-small">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="track-info">
+                            <h4>Ed sheeran</h4>
+                            <p>Shape of you</p>
+                        </div>
+                    </div>
+                    <div class="track-artist">Digital Horizon</div>
+                    <div class="track-album">Night Drive</div>
+                    <div class="track-actions">
+                        <button class="icon-btn" title="Play">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="icon-btn" title="Add to playlist">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="icon-btn" title="Like">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="track-row">
+                    <div class="track-number">2</div>
+                    <div class="track-title">
+                        <div class="track-icon-small" style="background: linear-gradient(135deg, #ff6b35, #f7931e);">
+                            <i class="fas fa-guitar"></i>
+                        </div>
+                        <div class="track-info">
+                            <h4>Imagine dragon</h4>
+                            <p>Thunder</p>
+                        </div>
+                    </div>
+                    <div class="track-artist">The Wanderers</div>
+                    <div class="track-album">Highway Tales</div>
+                    <div class="track-actions">
+                        <button class="icon-btn" title="Play">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="icon-btn" title="Add to playlist">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="icon-btn" title="Like">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="track-row">
+                    <div class="track-number">3</div>
+                    <div class="track-title">
+                        <div class="track-icon-small" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div class="track-info">
+                            <h4>BTS</h4>
+                            <p>Butter</p>
+                        </div>
+                    </div>
+                    <div class="track-artist">Luna Star</div>
+                    <div class="track-album">Stardust</div>
+                    <div class="track-actions">
+                        <button class="icon-btn" title="Play">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="icon-btn" title="Add to playlist">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="icon-btn" title="Like">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="track-row">
+                    <div class="track-number">4</div>
+                    <div class="track-title">
+                        <div class="track-icon-small" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <i class="fas fa-drum"></i>
+                        </div>
+                        <div class="track-info">
+                            <h4>Juice Wrld</h4>
+                            <p>Stay High</p>
+                        </div>
+                    </div>
+                    <div class="track-artist">Beat Masters</div>
+                    <div class="track-album">Dance Floor</div>
+                    <div class="track-actions">
+                        <button class="icon-btn" title="Play">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="icon-btn" title="Add to playlist">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="icon-btn" title="Like">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="track-row">
+                    <div class="track-number">5</div>
+                    <div class="track-title">
+                        <div class="track-icon-small" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="track-info">
+                            <h4>Ali Jaber</h4>
+                            <p>Suratul Khaf</p>
+                        </div>
+                    </div>
+                    <div class="track-artist">Tranquil Sounds</div>
+                    <div class="track-album">Serenity</div>
+                    <div class="track-actions">
+                        <button class="icon-btn" title="Play">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="icon-btn" title="Add to playlist">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="icon-btn" title="Like">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="track-row">
+                    <div class="track-number">6</div>
+                    <div class="track-title">
+                        <div class="track-icon-small" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="track-info">
+                            <h4>Central Cee</h4>
+                            <p>Committment Issues</p>
+                        </div>
+                    </div>
+                    <div class="track-artist">Caliente Band</div>
+                    <div class="track-album">Tropical Nights</div>
+                    <div class="track-actions">
+                        <button class="icon-btn" title="Play">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="icon-btn" title="Add to playlist">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button class="icon-btn" title="Like">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PLAYLISTS PAGE -->
+        <div id="playlists" class="page">
+            <div class="section-header">
+                <h2><i class="fas fa-list-ul"></i> Your Playlists</h2>
+                <button class="btn btn-primary">
+                    <i class="fas fa-plus"></i>
+                    Create Playlist
+                </button>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #ff6b6b, #ee5a6f);">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Liked Songs</h3>
+                    <p>127 songs • 8h 42min</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #56ab2f, #a8e063);">
+                        <i class="fas fa-running"></i>
+                    </div>
+                    <h3>Workout Energy</h3>
+                    <p>45 songs • 3h 15min</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Night Vibes</h3>
+                    <p>38 songs • 2h 30min</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                    <h3>Party Mix</h3>
+                    <p>89 songs • 5h 45min</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Meditation & Focus</h3>
+                    <p>52 songs • 4h 10min</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Morning Coffee</h3>
+                    <p>34 songs • 2h 20min</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Dreamy Acoustics</h3>
+                    <p>29 songs • 1h 55min</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3>Winter Chill</h3>
+                    <p>41 songs • 3h 5min</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEARCH PAGE -->
+        <div id="search" class="page">
+            <div class="section-header">
+                <h2><i class="fas fa-search"></i> Search</h2>
+            </div>
+
+            <div class="search-wrapper">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="What do you want to listen to?" id="searchInput">
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h3>Browse All</h3>
+            </div>
+
+            <div class="category-chips">
+                <div class="chip active">All</div>
+                <div class="chip">Songs</div>
+                <div class="chip">Artists</div>
+                <div class="chip">Albums</div>
+                <div class="chip">Playlists</div>
+                <div class="chip">Podcasts</div>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Top Charts</h3>
+                    <p>Most played songs worldwide</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>New Releases</h3>
+                    <p>Fresh tracks from your favorite artists</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-podcast"></i>
+                    </div>
+                    <h3>Podcasts</h3>
+                    <p>Discover amazing podcast shows</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Award Winners</h3>
+                    <p>Grammy and award-winning tracks</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>World Music</h3>
+                    <p>Sounds from around the globe</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Throwback Hits</h3>
+                    <p>Classics that never get old</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFILE PAGE -->
+        <div id="profile" class="page">
+            <div class="profile-container">
+                <div class="profile-hero">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h1>Music Enthusiast</h1>
+                    <p>Member since January 2024</p>
+                </div>
+
+                <div class="section-header">
+                    <h2><i class="fas fa-chart-bar"></i> Your Statistics</h2>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <i class="fas fa-clock"></i>
+                        <h3>342 hrs</h3>
+                        <p>Total Listening Time</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <i class="fas fa-music"></i>
+                        <h3>1,847</h3>
+                        <p>Songs Played</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <i class="fas fa-users"></i>
+                        <h3>156</h3>
+                        <p>Artists Followed</p>
+                    </div>
+
+                    <div class="stat-box">
+                        <i class="fas fa-list"></i>
+                        <h3>18</h3>
+                        <p>Playlists Created</p>
+                    </div>
+                </div>
+
+                <div class="section-header" style="margin-top: 2rem;">
+                    <h2><i class="fas fa-star"></i> Top Genres This Month</h2>
+                </div>
+
+                <div class="tracks-container">
+                    <div class="track-row">
+                        <div class="track-number">1</div>
+                        <div class="track-title">
+                            <div class="track-icon-small">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="track-info">
+                                <h4>Electronic</h4>
+                                <p>245 songs played</p>
+                            </div>
+                        </div>
+                        <div class="track-artist">35% of total</div>
+                        <div class="track-album"></div>
+                        <div class="track-duration"></div>
+                    </div>
+
+                    <div class="track-row">
+                        <div class="track-number">2</div>
+                        <div class="track-title">
+                            <div class="track-icon-small" style="background: linear-gradient(135deg, #ff6b35, #f7931e);">
+                                <i class="fas fa-guitar"></i>
+                            </div>
+                            <div class="track-info">
+                                <h4>Rock</h4>
+                                <p>189 songs played</p>
+                            </div>
+                        </div>
+                        <div class="track-artist">27% of total</div>
+                        <div class="track-album"></div>
+                        <div class="track-duration"></div>
+                    </div>
+
+                    <div class="track-row">
+                        <div class="track-number">3</div>
+                        <div class="track-title">
+                            <div class="track-icon-small" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="track-info">
+                                <h4>Pop</h4>
+                                <p>134 songs played</p>
+                            </div>
+                        </div>
+                        <div class="track-artist">19% of total</div>
+                        <div class="track-album"></div>
+                        <div class="track-duration"></div>
+                    </div>
+                </div>
+
+                <div class="section-header" style="margin-top: 2rem;">
+                    <h2><i class="fas fa-fire"></i> Most Played Track</h2>
+                </div>
+
+                <div class="card" style="max-width: 400px;">
+                    <div class="card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Neon Lights</h3>
+                    <p>Digital Horizon • Played 47 times</p>
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Navigation System
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pages = document.querySelectorAll('.page');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Get target page
+                const targetPage = link.getAttribute('data-page');
+                
+                // Remove active class from all links and pages
+                navLinks.forEach(l => l.classList.remove('active'));
+                pages.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked link and corresponding page
+                link.classList.add('active');
+                document.getElementById(targetPage).classList.add('active');
+                
+                // Update URL hash
+                window.location.hash = targetPage;
+            });
+        });
+
+        // Handle page load with hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetLink = document.querySelector(`[data-page="${hash}"]`);
+                if (targetLink) {
+                    targetLink.click();
+                }
+            }
+        });
+
+        // Dynamic greeting based on time
+        function updateGreeting() {
+            const hour = new Date().getHours();
+            const greetingElement = document.getElementById('current-time');
+            
+            if (hour < 12) {
+                greetingElement.textContent = 'Good morning';
+            } else if (hour < 18) {
+                greetingElement.textContent = 'Good afternoon';
+            } else {
+                greetingElement.textContent = 'Good evening';
+            }
+        }
+        updateGreeting();
+
+        // Play button functionality
+        document.querySelectorAll('.play-overlay, .icon-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const icon = btn.querySelector('i');
+                
+                if (icon && icon.classList.contains('fa-play')) {
+                    icon.classList.remove('fa-play');
+                    icon.classList.add('fa-pause');
+                    
+                    // Reset after 2 seconds for demo
+                    setTimeout(() => {
+                        icon.classList.remove('fa-pause');
+                        icon.classList.add('fa-play');
+                    }, 2000);
+                }
+            });
+        });
+
+        // Like button functionality
+        document.querySelectorAll('.icon-btn').forEach(btn => {
+            const icon = btn.querySelector('.fa-heart');
+            if (icon) {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (icon.classList.contains('fa-heart')) {
+                        icon.style.color = '#ff6b6b';
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+                    }
+                });
+            }
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                console.log('Searching for:', searchTerm);
+                // Add your search logic here
+            });
+        }
+
+        // Category chips
+        document.querySelectorAll('.chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+            });
+        });
+
+        // Genre cards
+        document.querySelectorAll('.genre-card').forEach(card => {
+            card.addEventListener('click', () => {
+                console.log('Genre selected:', card.textContent.trim());
+            });
+        });
+
+        // Card hover effect with smooth play button
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const playBtn = card.querySelector('.play-overlay');
+                if (playBtn) {
+                    playBtn.style.opacity = '1';
+                    playBtn.style.transform = 'translateY(0)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                const playBtn = card.querySelector('.play-overlay');
+                if (playBtn) {
+                    playBtn.style.opacity = '0';
+                    playBtn.style.transform = 'translateY(10px)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
